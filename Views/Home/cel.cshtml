@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tienda de Tecnología - ARMATUPC</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- Cabecera de la página -->
+        <div style="position: fixed; top: 100px; right: 10px; background-color: #f1f1f1; padding: 10px;" class="carrito">
+            <a href="Carrito.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Carrito de compras" width="30" height="30">
+            </a>
+        </div>
+
+        <!-- Contenido de la página de laptops -->
+        <div class="container" style="text-align: center;">
+            <h1>CELULARES</h1>
+
+            <div class="row" style=" display: flex; height: auto; align-items: stretch; background-color: #ffffff;">
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/2e790cc5eb461938d15aefb1e5f60681-product.webp" alt="Producto 1" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Celular OnePlus 10 Pro 5G</h2>
+                        <p>
+                            CPU：Snapdragon 8 Gen 1 plataforma móvil 5G Chipset
+                            De la batería：Batería de 5000mAh de doble celda (2500mAh valor típico)¡80W SUPERVOOCCarga rápida con cable, carga flash inalámbrica 50W AIRVOOC
+                            Cámara frontal：32MP(Sony IMX 615), EIS, enfoque fijo
+                            Cámara trasera：48MP (Sony IMX789)+ 50MP(JN1) + 8MP(f/2,4), cámaras triples
+                            Pantalla：AMOLED fluido de 6,7 ''120Hz con LTPO, profundidad de Color de 10 bits, Corning®Gorila®De vidrio
+                            Características：OxygenOS 12 Ultrashot HDR, Flash de pantalla, retoque facial, admite varios idiomas/servicio de Google/actualización OTA. NFC,Bluetooth 5,2
+                        </p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/14d07264a1c578b21aa1fda519dec03d-product.webp" alt="Producto 2" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Global Xiaomi Black Shark 5 Pro</h2>
+                        <p>CPU: Snapdragon 8 Gen 1GPU: Adreno™ 730Ram y Rom: LPDDR5 6400MHz Mejorado UFS3.1Almacenamiento: 16+256GBColor: negro estelar/blanco nebulosa.Batería y carga: 
+                        4650 mAh (típico) 120 W hipercarga; Admite control de calidad/PD; USB tipo CPantalla: OLED de 6,67 pulgadas; frecuencia de actualización de 144 Hz; Frecuencia de muestreo táctil de 720 Hz; 
+                        Sensible a la presiónEfecto de iluminación: Efecto de iluminación de ojo de tiburónNFC: SiCámara: cámara principal de 108 MP, 0,7 µm, f/1,79, lente 7P; Cámara frontal de 16MP; Admite grabación de video 4K 60 fps, 
+                        grabación de video HDR10 +, grabación de video 1080p 60 fpsConectividad: 4 X 4 MIMO, Wi-Fi: 2 X 2 MIMO; bluetooth 5.2; Pantalla Wi-Fi</p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/c758977b0175e4f6cf95f00e6a284ba4-product.webp" alt="Producto 3" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Xiaomi POCO F5 5G 12+256GB</h2>
+                        <p>Características Pantalla6,67 pulgadas, OLED 120Hz frecuencia de actualización FHD + pantalla, 1080x2400CPUQualcomm Snapdragon 7 Plus Gen 2,Octa-core hasta 2,91 GHzRAM + ROM8GB/12GB/16GB RAM + 256GB/512GB/1TBCámara64 MP (ancho) + 8 MP (ultra ancho) + 2 MP (macro) ,
+                        16 MP (ancho)BateríaBatería de alta capacidad de 5000mAh (tipo), cargador rápido de 67WSOMIUI 14, versión de China, compatible con chino e inglés (número de modelo: 23049RAD8C)OtrosNFC, 5G, MIUI 14, conector para auriculares de 3,5mm, Bluetooth 5,2,</p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Código JavaScript para agregar productos al carrito
+            var botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
+            botonesAgregarCarrito.forEach(function (boton) {
+                boton.addEventListener('click', function () {
+                    var producto = this.parentElement;
+                    var nombre = producto.querySelector('h2').textContent;
+                    var descripcion = producto.querySelector('p').textContent;
+                    var cantidad = parseInt(producto.querySelector('.cantidad').value);
+
+                    // Crea un objeto de producto con los detalles
+                    var productoCarrito = {
+                        nombre: nombre,
+                        descripcion: descripcion,
+                        cantidad: cantidad
+                    };
+
+                    // Agrega el producto al carrito (puedes implementar esta función según tus necesidades)
+                    agregarAlCarrito(productoCarrito);
+                });
+            });
+
+            // Función para agregar el producto al carrito (ejemplo)
+            function agregarAlCarrito(producto) {
+                // Implementa tu lógica para agregar el producto al carrito aquí
+                console.log('Producto agregado al carrito:', producto);
+            }
+        </script>
+    </body>
+</html>

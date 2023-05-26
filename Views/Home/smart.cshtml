@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tienda de Tecnología - ARMATUPC</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- Cabecera de la página -->
+        <div style="position: fixed; top: 4px; right: 10px; background-color: #f1f1f1; padding: 10px;" class="carrito">
+            <a href="Carrito.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Carrito de compras" width="30" height="30">
+            </a>
+        </div>
+
+        <!-- Contenido de la página de laptops -->
+        <div class="container" style="text-align: center;">
+            <h1>Componentes</h1>
+
+            <div class="row" style=" display: flex; height: auto; align-items: stretch; background-color: #ffffff;">
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/96b4c237082eb920bd3a2d1320c53bd3-product.webp" alt="Producto 1" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Apple Watch Se 2ª Gen Gps De 40mm 2022 Color Negro</h2>
+                        <p>
+                            Articulo:Apple Watch
+                            Serie:SE (2da Gen)
+                            Marca:Apple
+                            Modelo:MNJT3LZ/A
+                            Color:Medianoche
+                            Material:Aluminio
+                            Tamaño:40 mm
+                            Capacidad:32GB
+                            Resolucion de Pantalla:Hasta 1,000 nits de brillo
+                            Tipo de pantalla:Pantalla Retina OLED LTPO
+                            Conectividad:Wi-Fi / Bluetooth
+                            Resistente al Agua:Resistente al agua hasta 50 m
+                            Extensible:Deportiva Medianoche
+                            Red:GPS
+                            Incluye:Watch, Correa y Cable de carga magnetica USB-C
+                        </p>
+
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/daa585bed22f64c5556b86a61c27b799-product.webp" alt="Producto 2" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Apple Watch Series 5 32GB (GPS+Cellular) 40MM REACONDICIONADO--Rosa</h2>
+                        <p>
+                            Es posible que algunas compañías telefónicas NO admitan las funciones de E-SIM. Por favor, consulte a su operador.
+                            Original de Apple, ersión GPS + Cellula
+                            Memoria: 1 GB de RAM + 32 GB de ROM
+                            Sistema operativo: watchOS 6.0, actualizable a 7.5
+                            Chipset: Apple S5
+                            Bluetooth: 5.0, A2DP, LE
+                            GPS: Sí, con A-GPS, GLONASS,GALILEO,QZSS
+                            Batería: 245mAh
+                        </p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/ae72ae6b7ca02710ee4ac9532e77314c-product.webp" alt="Producto 3" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Apple Watch Series 8 GPS 45mm Medianoche</h2>
+                        <p>
+                            Articulo:Apple Watch
+                            Serie:S8
+                            Marca:Apple
+                            Modelo:MNP13LZ/A
+                            Color:Medianoche
+                            Material:Aluminio
+                            Tamaño:45 mm
+                            Capacidad:32GB
+                            Resolucion de Pantalla:Hasta 1,000 nits de brillo
+                            Tipo de pantalla:Pantalla Retina OLED LTPO siempre activa
+                            Conectividad:Wi-Fi / Bluetooth
+                            Resistente al Agua:Resistente al agua hasta 50 m
+                            Extensible:Deportiva Medianoche
+                            Red:GPS
+                            Incluye:Watch, Correa y Cable de carga magnetica USB-C
+                        </p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Código JavaScript para agregar productos al carrito
+            var botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
+            botonesAgregarCarrito.forEach(function (boton) {
+                boton.addEventListener('click', function () {
+                    var producto = this.parentElement;
+                    var nombre = producto.querySelector('h3').textContent;
+                    var descripcion = producto.querySelector('p').textContent;
+                    var cantidad = parseInt(producto.querySelector('.cantidad').value);
+
+                    // Crea un objeto de producto con los detalles
+                    var productoCarrito = {
+                        nombre: nombre,
+                        descripcion: descripcion,
+                        cantidad: cantidad
+                    };
+
+                    // Agrega el producto al carrito (puedes implementar esta función según tus necesidades)
+                    agregarAlCarrito(productoCarrito);
+                });
+            });
+
+            // Función para agregar el producto al carrito (ejemplo)
+            function agregarAlCarrito(producto) {
+                // Implementa tu lógica para agregar el producto al carrito aquí
+                console.log('Producto agregado al carrito:', producto);
+            }
+        </script>
+    </body>
+</html>

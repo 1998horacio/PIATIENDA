@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tienda de Tecnología - ARMATUPC</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- Cabecera de la página -->
+        <div style="position: fixed; top: 4px; right: 10px; background-color: #f1f1f1; padding: 10px;" class="carrito">
+            <a href="Carrito.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" alt="Carrito de compras" width="30" height="30">
+            </a>
+        </div>
+
+        <!-- Contenido de la página de laptops -->
+        <div class="container" style="text-align: center;">
+            <h1>Componentes</h1>
+
+            <div class="row" style=" display: flex; height: auto; align-items: stretch; background-color: #ffffff;">
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/9db60bd928d6a1b1e1a509d8ab7a9321-product.webp" alt="Producto 1" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Laptop Alienware M15 R6 15.6''</h2>
+                        <p>Computadora Gamer: Alienware m15 R6 is engineered with: 11th Generation Intel® Core™ i7-11800H (24MB Cache, up to 4.6 GHz, 8 cores), 15.6-inch QHD (2560 x 1440) 240Hz 2ms with ComfortView Plus, NVIDIA G-SYNC and Advanced Optimus, 16GB 3200MHz DDR4, 512GB M.2 PCIe NVMe Solid State Drive, NVIDIA® GeForce RTX™ 3070 8GB GDDR6, Black, Dark Side of the Moon</p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/a3c1016d1c733a27231560ccdceb1b1e-product.webp" alt="Producto 2" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Lenovo IdeaPad 3 Gaming</h2>
+                        <p>Máximo rendimiento Dicen que no se puede tener un alto rendimiento y una batería de larga duración en la misma computadora portátil. Dicen que una computadora portátil para juegos de alto rendimiento debe ser grande, voluminosa y pesada. Están equivocados. Ahora puede disfrutar de juegos de élite en una computadora portátil delgada y liviana con una increíble duración de la batería, gracias a los procesadores AMD Ryzen 7-7735HS. Nunca vuelvas a comprometer tu portátil para juegos</p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="column" style="background-color: #ffffff; width: 33.33%; margin: 10px; text-align: center; line-height: 50px; font-size: 20px; flex: 1 1 200px;">
+                    <div class="producto">
+                        <img src="https://i.linio.com/p/ef831691e54d8dc5a697dcd6bb6ca813-product.webp" alt="Producto 3" style="max-width: 200px; max-height: 200px; margin-bottom: 10px;">
+                        <h2 style="margin-top: 0;">Laptop Xpg Xenia 15g I7 13700h 32gb 1tb Ssd Rtx 4070 15.6</h2>
+                        <p>
+                            Procesador: Intel® Core™ i7 13700H
+                            Sistema Operativo: Windows 11
+                            Gráficos: NVIDIA® GeForce RTX™ 4070 8GB GDDR6 (140W)
+                            Pantalla: Panel de 15,6"" FHD, 144Hz, 300nits, 72% NTSC IPS
+                            Almacenamiento: SSD M.2 de 1 TB ADATA LEGEND 850 PCIe Gen4x4
+                            Memoria: Memoria DDR5 5600 SO-DIMM* de 32 GB (16 GB*2) de ADATA*
+                            Batería: Batería de iones de litio de 53,35 Whr
+                            Teclado: Teclado RGB de una zona
+                            Red: Wifi 6E 802.11ax, BT 5.2
+                        </p>
+                        <input type="number" min="1" value="1" class="form-control cantidad" />
+                        <button style="margin-top: 10px;" class="btn btn-primary agregar-carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Código JavaScript para agregar productos al carrito
+            var botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
+            botonesAgregarCarrito.forEach(function (boton) {
+                boton.addEventListener('click', function () {
+                    var producto = this.parentElement;
+                    var nombre = producto.querySelector('h3').textContent;
+                    var descripcion = producto.querySelector('p').textContent;
+                    var cantidad = parseInt(producto.querySelector('.cantidad').value);
+
+                    // Crea un objeto de producto con los detalles
+                    var productoCarrito = {
+                        nombre: nombre,
+                        descripcion: descripcion,
+                        cantidad: cantidad
+                    };
+
+                    // Agrega el producto al carrito (puedes implementar esta función según tus necesidades)
+                    agregarAlCarrito(productoCarrito);
+                });
+            });
+
+            // Función para agregar el producto al carrito (ejemplo)
+            function agregarAlCarrito(producto) {
+                // Implementa tu lógica para agregar el producto al carrito aquí
+                console.log('Producto agregado al carrito:', producto);
+            }
+        </script>
+    </body>
+</html>
